@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom'
+import { TemporaryDrawer } from './components/Drawer'
 
 import logo from './logo.svg';
 import './App.css';
