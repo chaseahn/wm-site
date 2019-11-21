@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function HomePage() {
   return (
     <div className="container">
-      <h1>Home Page</h1>
+      <h1>Winik Media</h1>
       <p>
         <Link to="/about">about page</Link>
       </p>

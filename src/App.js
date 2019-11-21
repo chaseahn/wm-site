@@ -5,8 +5,8 @@ import logo from './logo.svg';
 import './App.css';
 
 // Import pages from src/components
-import LandingPage from './components/LandingPage'
-import AboutPage from './components/AboutPage'
+import LandingPage from './pages/LandingPage'
+import AboutPage from './pages/AboutPage'
 
 function App() {
   return (
