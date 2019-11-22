@@ -23,6 +23,9 @@ var buttonStyle = {
     borderColor: "white",
     paddingLeft: "32px",
     paddingRight: "32px",
+    paddingTop: "8px",
+    paddingBottom: "8px",
+    minWidth: "200px",
 }
 
 export default OutlineButton; 

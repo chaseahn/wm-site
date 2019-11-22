@@ -1,35 +1,41 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Grid } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
 
 // Import Components
+import NavTop from '../components/NavTop';
 import OutlineButton from '../components/OutlineButton';
 
-import Background from "../img/background.jpg"
+import Background from "../img/cam.jpeg"
 
 
 export default function HomePage() {
 
   return (
     <div>
-      <p>
-        Winik Media Logo
-      </p>
+      {/* Maintain effect by hiding /p */}
+      <p></p>
+      <NavTop />
 
       {/* Parallax Banner */}
       <div style={styles.parallax}>
-        <h1 style={styles.parallax.title}>
-          Winik <span style={styles.parallax.span}>Media</span>
-          <h3 style={styles.parallax.subtitle}>
-            The Past, Present, & Future of Sports
-          </h3>
-        </h1>
+        <Grid container 
+          direction="column"
+          justify="center"
+          alignItems="center"
+          style={{position: "absolute", top: "24%", width: "100%", padding: "30px"}}>
+          <h1 style={styles.parallax.title}>
+            Winik <span style={styles.parallax.span}>Media</span>
+            <h3 style={styles.parallax.subtitle}>
+              The Past, Present, & Future of Sports
+            </h3>
+          </h1>
+        </Grid>
         <Grid container 
           direction="row"
           justify="center"
           alignItems="center"
-          style={{position: "absolute", top: '35%', width: "100%", padding: "30px"}}>
+          style={{position: "absolute", top: '39%', width: "100%", padding: "30px"}}>
           <OutlineButton text="About Us" />
           <OutlineButton text="Our Work" />
           <OutlineButton text="Contact Us" />
@@ -48,20 +54,18 @@ const styles = {
     margin: "0",
     padding: "0",
     backgroundImage: `url(${Background})`,
-    minHeight: "450px",
+    minHeight: "550px",
     backgroundAttachment: "fixed",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    alignText: "center",
-    justifyContent: "center",
-    boxShadow: "inset 0 0 0 2000px rgba(0,0,0,0.6)",
+    boxShadow: "inset 0 0 0 2000px rgba(0,0,0,0.7)",
     title: {
       color: "white",
       position: 'absolute', left: '50%', top: '25%',
       transform: 'translate(-50%, -50%)',
-      fontSize: "4em",
-      margin: "0",
+      fontSize: "4.5em",
+      margin: "0"
     },
     subtitle: {
       color: "white",
