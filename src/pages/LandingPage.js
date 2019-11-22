@@ -54,7 +54,7 @@ const styles = {
     margin: "0",
     padding: "0",
     backgroundImage: `url(${Background})`,
-    minHeight: "550px",
+    minHeight: "580px",
     backgroundAttachment: "fixed",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -75,7 +75,7 @@ const styles = {
       width: "100%"
     },
     span: {
-      color: "blue"
+      color: "#3f91dd"
     }
   }
 };

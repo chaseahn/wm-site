@@ -13,19 +13,31 @@ class OutlineButton extends Component {
 
         return (
             <div className="navtop">
-                <AppBar position="fixed">
+                <AppBar position="fixed" style={NavTop.appBar}>
                     <Toolbar>
-                    <IconButton edge="start" className="navtop-icon-button"color="blue" aria-label="menu">
-                        <MenuIcon />
+                    <IconButton edge="start" className="navtop-icon-button" color="black" aria-label="menu">
+                        <MenuIcon style={NavTop.hamburger} />
                     </IconButton>
                     <Typography variant="h6" className="navtop-title">
                         Winik Media
                     </Typography>
-                    <Button color="inherit">Login</Button>
+                    <Button color="inherit" style={NavTop.links}>Login</Button>
                     </Toolbar>
                 </AppBar>
             </div>
         )
+    }
+}
+
+var NavTop = {
+    appBar: {
+        backgroundColor: "black"
+    },
+    hamburger: {
+        color: "white"
+    },
+    links: {
+        float: "right"
     }
 }
 
