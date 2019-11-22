@@ -32,4 +32,9 @@ body, html {
 
 h1 {
   font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+}
+
+.outlined-button {
+  background-color: white
 }

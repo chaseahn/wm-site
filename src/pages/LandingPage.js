@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import OutlineButton from '../components/OutlineButton';
 
 import Background from "../img/background.jpg"
+
 
 export default function HomePage() {
   return (
@@ -9,22 +11,35 @@ export default function HomePage() {
       <p>Winik Media</p>
 
       <div style={parallax}>
+        <h1 style={parallax.title}>
+          Winik Media
+          <OutlineButton />
+        </h1>
+
       </div>
 
       <div>
       Scroll Up and Down this page to see the parallax scrolling effect.
-      This div is just here to enable scrolling.
-      Tip: Try to remove the background-attachment property to remove the scrolling effect.
       </div>
     </div>
   )
 }
 
 const parallax = {
+  margin: "0",
+  padding: "0",
   backgroundImage: `url(${Background})`,
-  minHeight: "500px",
+  minHeight: "550px",
   backgroundAttachment: "fixed",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
+  alignText: "center",
+  justifyContent: "center",
+  title: {
+    color: "white",
+    position: 'absolute', left: '50%', top: '25%',
+    transform: 'translate(-50%, -50%)',
+    fontSize: "5em"
+  }
 };
