@@ -8,7 +8,7 @@ class OutlineButton extends Component {
         return (
             <div>
                 <Button variant="outlined" style={buttonStyle}>
-                    About us
+                    {this.props.text}
                 </Button>
             </div>
         )
