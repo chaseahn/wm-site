@@ -7,7 +7,7 @@ class OutlineButton extends Component {
 
     render() {
         return (
-            <div>
+            <div className="button-padding">
                 <Button variant="outlined" style={buttonStyle}>
                     {this.props.text}
                 </Button>
@@ -22,7 +22,7 @@ var buttonStyle = {
     borderRadius: "100px",
     borderColor: "white",
     paddingLeft: "32px",
-    paddingRight: "32px"
+    paddingRight: "32px",
 }
 
 export default OutlineButton; 

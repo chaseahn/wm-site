@@ -35,7 +35,16 @@ h1 {
   font-weight: 900;
 }
 
-.outlined-button {
-  background-color: blue
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+}
 
+.button-padding {
+  padding: 20px;
+}
+
+.lp-bantext {
+  align-content: center;
 }
