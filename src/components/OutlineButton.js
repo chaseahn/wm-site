@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
+import { whileStatement } from '@babel/types';
 
 
 class OutlineButton extends Component {
@@ -16,10 +17,12 @@ class OutlineButton extends Component {
 }
 
 var buttonStyle = {
-    backgroundColor: "black",
+    // backgroundColor: "black",
     color: "white",
-    size: "large",
-    borderRadius: "100px"
+    borderRadius: "100px",
+    borderColor: "white",
+    paddingLeft: "32px",
+    paddingRight: "32px"
 }
 
 export default OutlineButton; 

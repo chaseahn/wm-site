@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Grid } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
 // Import Components
 import OutlineButton from '../components/OutlineButton';
@@ -9,6 +10,8 @@ import Background from "../img/background.jpg"
 
 
 export default function HomePage() {
+  const classes = useStyles();
+
   return (
     <div>
       <p>
@@ -19,20 +22,17 @@ export default function HomePage() {
       <div style={styles.parallax}>
         <h1 style={styles.parallax.title}>
           Winik <span style={styles.parallax.span}>Media</span>
-          <Grid container style={styles.buttonContainer} maxWidth="sm">
-            <Grid item>
-              <OutlineButton text="About" />
-            </Grid>
-            <Grid item>
-              <OutlineButton text="Work" />
-            </Grid>
-            <Grid item>
-              <OutlineButton text="Contact" />
-            </Grid>
-          </Grid>
         </h1>
+        <Grid container 
+          direction="row"
+          justify="center"
+          alignItems="center"
+          style={{position: "absolute", top: '35%'}}>
+          <OutlineButton text="About" />
+          <OutlineButton text="Work" />
+          <OutlineButton text="Contact" />
+        </Grid>
       </div>
-
       <div>
       Scroll Up and Down this page to see the parallax scrolling effect.
       </div>
@@ -42,6 +42,7 @@ export default function HomePage() {
 
 const styles = {
   parallax: {
+    width: "100%",
     margin: "0",
     padding: "0",
     backgroundImage: `url(${Background})`,
@@ -58,15 +59,18 @@ const styles = {
       position: 'absolute', left: '50%', top: '25%',
       transform: 'translate(-50%, -50%)',
       fontSize: "4em",
-      maring: "auto"
+      margin: "auto"
     },
     span: {
       color: "blue"
     }
-  },
-  buttonContainer: {
-    padding: "0",
-    alignText: "center",
-    justifyContent: "center",
   }
 };
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    '& > *': {
+      margin: theme.spacing(2),
+    }
+  },
+}));
