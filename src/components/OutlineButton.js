@@ -16,8 +16,10 @@ class OutlineButton extends Component {
 }
 
 var buttonStyle = {
+    backgroundColor: "black",
     color: "white",
-    size: "large"
+    size: "large",
+    borderRadius: "100px"
 }
 
 export default OutlineButton; 

@@ -1,6 +1,6 @@
 
 /* import Raleway font */
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,800&display=swap');
 
 .App {
   text-align: center;
@@ -36,5 +36,6 @@ h1 {
 }
 
 .outlined-button {
-  background-color: white
+  background-color: blue
+
 }
