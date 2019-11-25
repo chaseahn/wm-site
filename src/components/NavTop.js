@@ -21,19 +21,16 @@ class OutlineButton extends Component {
                             container 
                             spacing={24}
                             >
-                        <Grid item>  
+                        <Grid item style={NavTop.left} >  
                             <IconButton edge="start" className="navtop-icon-button" color="black" aria-label="menu">
                                 <MenuIcon style={NavTop.hamburger} />
                             </IconButton>
-                            <Typography variant="h6" className="navtop-title">
+                            <Typography variant="h6" type="title">
                                 Winik Media
                             </Typography>
                         </Grid>  
-                        <Grid item>
-                            <div>
+                        <Grid item style={NavTop.right}>
                                 <Button color="inherit" >Login</Button>
-                                <Button color="inherit" >Login</Button>
-                            </div>
                         </Grid>
                         </Grid>
                     </Toolbar>
@@ -48,11 +45,16 @@ var NavTop = {
         backgroundColor: "black"
     },
     hamburger: {
-        color: "white"
+        color: "gray"
     },
-    links: {
-        float: "right"
+    left: {
+        display: "flex",
+        alignItems: "center"
+    },
+    right: {
+        alignItems: "center"
     }
+
 }
 
 

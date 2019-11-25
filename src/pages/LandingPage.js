@@ -42,7 +42,9 @@ export default function HomePage() {
         </Grid>
       </div>
       <div>
-      Scroll Up and Down this page to see the parallax scrolling effect.
+        <Container maxWidth="md" style={styles.guide}>
+          Scroll Up and Down this page to see the parallax scrolling effect.
+        </Container>
       </div>
     </div>
   )
@@ -77,6 +79,9 @@ const styles = {
     span: {
       color: "#3f91dd"
     }
+  },
+  guide: {
+    backgroundColor: "yellow"
   }
 };
 
