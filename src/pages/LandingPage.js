@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Grid } from '@material-ui/core';
+import { Container, Grid, Paper, Typography } from '@material-ui/core';
 
 // Import Components
 import NavTop from '../components/NavTop';
 import OutlineButton from '../components/OutlineButton';
 
 import Background from "../img/cam.jpeg"
+import { maxWidth } from '@material-ui/system';
 
 
 export default function HomePage() {
@@ -41,11 +42,43 @@ export default function HomePage() {
           <OutlineButton text="Contact Us" />
         </Grid>
       </div>
-      <div>
-        <Container maxWidth="md" style={styles.guide}>
-          Scroll Up and Down this page to see the parallax scrolling effect.
-        </Container>
-      </div>
+      <Container style={{padding: "20px", backgroundColor: "gray"}}>
+      <Typography>
+        <h3>
+          Our Services
+        </h3>
+      </Typography>
+      <Grid container 
+          direction="row"
+          justify="center"
+          alignItems="center"
+          style={styles.guide}>
+          <Grid item >
+            <Paper style={styles.paper}>1</Paper>
+          </Grid>
+          <Grid itemProp>
+            <Paper style={styles.paper}>2</Paper>
+          </Grid>
+          <Grid item >
+            <Paper style={styles.paper}>3</Paper>
+          </Grid>
+      {/* </Grid>
+      <Grid container 
+          direction="row"
+          justify="center"
+          alignItems="center"
+          style={styles.guide}> */}
+          <Grid item >
+            <Paper style={styles.paper}>4</Paper>
+          </Grid>
+          <Grid itemProp>
+            <Paper style={styles.paper}>5</Paper>
+          </Grid>
+          <Grid item >
+            <Paper style={styles.paper}>6</Paper>
+          </Grid>
+      </Grid>
+      </Container>
     </div>
   )
 }
@@ -81,7 +114,17 @@ const styles = {
     }
   },
   guide: {
-    backgroundColor: "yellow"
+    backgroundColor: "yellow",
+    justifyContent: "space-between",
+    alignItems: "center",
+    maxWidth: "lg"
+  },
+  paper: {
+    textAlign: "center",
+    maxWidth: "lg",
+    height: "auto",
+    padding: "20px",
+    margin: "10px"
   }
 };
 
