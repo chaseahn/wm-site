@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Grid, Paper, Typography } from '@material-ui/core';
+import { Container, Grid, Paper, Typography, Box } from '@material-ui/core';
 
 // Import Components
 import NavTop from '../components/NavTop';
@@ -42,42 +42,46 @@ export default function HomePage() {
           <OutlineButton text="Contact Us" />
         </Grid>
       </div>
-      <Container style={{padding: "20px", backgroundColor: "gray"}}>
-      <Typography>
-        <h3>
-          Our Services
-        </h3>
-      </Typography>
-      <Grid container 
-          direction="row"
-          justify="center"
-          alignItems="center"
-          style={styles.guide}>
-          <Grid item >
-            <Paper style={styles.paper}>1</Paper>
-          </Grid>
-          <Grid itemProp>
-            <Paper style={styles.paper}>2</Paper>
-          </Grid>
-          <Grid item >
-            <Paper style={styles.paper}>3</Paper>
-          </Grid>
-      {/* </Grid>
-      <Grid container 
-          direction="row"
-          justify="center"
-          alignItems="center"
-          style={styles.guide}> */}
-          <Grid item >
-            <Paper style={styles.paper}>4</Paper>
-          </Grid>
-          <Grid itemProp>
-            <Paper style={styles.paper}>5</Paper>
-          </Grid>
-          <Grid item >
-            <Paper style={styles.paper}>6</Paper>
-          </Grid>
-      </Grid>
+
+      {/* Services Container  - v if BG needed*/}
+      <Container style={{padding: "30px", backgroundColor: "gray", maxWidth: "100%"}}>
+      <Container maxWidth="md">
+        <Typography>
+          <h3>
+            Our Services
+          </h3>
+        </Typography>
+        <Grid container 
+            direction="row"
+            justify="center"
+            alignItems="center"
+            style={styles.guide}>
+            <Grid item >
+              <Paper style={styles.paper}>1</Paper>
+            </Grid>
+            <Grid itemProp>
+              <Paper style={styles.paper}>2</Paper>
+            </Grid>
+            <Grid item >
+              <Paper style={styles.paper}>3</Paper>
+            </Grid>
+        {/* </Grid>
+        <Grid container 
+            direction="row"
+            justify="center"
+            alignItems="center"
+            style={styles.guide}> */}
+            <Grid item >
+              <Paper style={styles.paper}>4</Paper>
+            </Grid>
+            <Grid itemProp>
+              <Paper style={styles.paper}>5</Paper>
+            </Grid>
+            <Grid item >
+              <Paper style={styles.paper}>6</Paper>
+            </Grid>
+        </Grid>
+        </Container>     
       </Container>
     </div>
   )
@@ -89,7 +93,7 @@ const styles = {
     margin: "0",
     padding: "0",
     backgroundImage: `url(${Background})`,
-    minHeight: "580px",
+    minHeight: "620px",
     backgroundAttachment: "fixed",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -121,7 +125,7 @@ const styles = {
   },
   paper: {
     textAlign: "center",
-    maxWidth: "lg",
+    width: "224px",
     height: "auto",
     padding: "20px",
     margin: "10px"
